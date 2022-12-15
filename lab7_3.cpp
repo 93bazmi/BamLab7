@@ -1,10 +1,20 @@
 #include<iostream>
-
+#include<cmath>
 using namespace std;
 
+int A,B,C ;
+int adiff(int A,int B){
+  C = A-B ;
+  C = abs(C) ;
+  if(C%360<=180){
+    return C%360 ;
+  }else{
+    return 360-(C%360) ;
+  }
+}
 
 int main(){
-  cout << adiff(180,270);
+  cout << adiff(180,270); 
   cout << adiff(210,45);
   cout << adiff(0,360);
   cout << adiff(10,350);
